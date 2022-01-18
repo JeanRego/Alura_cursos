@@ -1,0 +1,77 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>COMPARAR</button><br>
+<br>
+
+
+<script>
+
+function sorteio (){
+    return Math.round(Math.random() * 10);
+}
+
+var numeroSorteado = sorteio();
+console.log(numeroSorteado);
+
+var oMeuChute = document.querySelector("input");
+var tentativas = 0;
+var maximo = 4; 
+
+function verifica(){
+    tentativas++;
+    if(tentativas >= maximo){
+        
+        alert("BLOQUEADO");
+    
+
+    }else if(oMeuChute.value == numeroSorteado){
+    
+        alert("Voce acertou");
+    }
+    
+else {
+    alert("Vc errou. Tente novamente");
+}
+}
+
+var button= document.querySelector("button");
+button.onclick = verifica;
+
+//II
+    function meChame (){
+
+     
+    var quantidade = parseInt(prompt("Qual a quantidade de ingredientes"));
+    var itens = [];
+    var contador = 1;
+
+    while (contador <= quantidade){
+
+        var itensDeEscolha = document.querySelector("#adicionar").value;
+        achou = false;
+
+        for(var posicao = 0; posicao <= itens.length;posicao++){
+            if (itensDeEscolha == itens){
+                achou = true;
+            }
+        }
+        if (achou == false){
+            contador++;
+            itens.push(itensDeEscolha.value);
+        }else{
+            alert("Item repetido")
+        }
+    }
+    return itens;
+    }
+
+var two = document.querySelector("#btn");
+two.onclick = meChame;
+
+console.log(itens);
+    
+</script>
+
+<input type= "text" id="adicionar"/>
+<input type="button" id="btn">

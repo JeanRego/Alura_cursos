@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "Jean";
+    var senhaCadastrada = "123";
+
+    var numeroTentativas = 0;
+    var maximo = 2;
+    var tentativa = 1;
+
+    
+    while (numeroTentativas <= maximo) {
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+    alert("Bem-vindo ao sistema " + loginInformado);
+    document.write("Sucesso!!!")
+    numeroTentativas = maximo;
+} else {
+
+alert("Login inválido. Tente novamente. " +"Número de tentativas " + tentativa);
+
+tentativa = tentativa + 1;
+
+    if(numeroTentativas ==2 ){
+        document.write("Bloqueado");
+        
+    }
+}
+numeroTentativas = numeroTentativas +1;
+    }
+    
+</script>

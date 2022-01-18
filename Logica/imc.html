@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+function pula(){
+	document.write("<br><br>");
+} 
+
+function mostre(frase){
+	document.write(frase);
+	pula();
+}
+
+function calcimc(peso, altura){
+	
+	return peso/(altura*altura);
+}
+
+var nome = prompt("Ola, qual o seu nome ?");
+var peso = prompt(nome+" por favor, informe seu peso.");
+var altura = prompt(nome+" por favor informe sua altura! Mas lembre-se de nao utilizar virgula");
+var imc = calcimc(peso, altura);
+mostre (nome + "Seu imc é de : " + imc); 
+
+if (imc < 18.5) {
+	mostre (nome + ", você esta abaixo do seu peso ideal.");
+
+}
+
+if (imc > 35) {
+	mostre(nome + " você esta bem gordo");
+}
+
+if (imc >= 18.5 && imc <= 35){ 
+	mostre(nome +" você esta com um pesso exelente");
+		
+	
+}
+
+// 18.5	
+// 35
+//18.5, 35
+
+</script>

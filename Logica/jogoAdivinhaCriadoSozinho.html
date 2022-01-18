@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>COMPARE</button>
+
+<script>
+function pula () {
+    document.write("<br>");
+}
+
+function escreva (mostre){
+    document.write(mostre)
+    pula();
+}
+function sorteia (n){
+    return numeropensado = Math.round(Math.random() * 10);
+    
+}
+
+
+var numero = sorteia();
+var tentativa = 0; 
+var maximoTentativas = 4;
+
+var input = document.querySelector("input");
+var button = document.querySelector("button");
+button.onclick = teste;       
+
+console.log(numero);
+
+function teste () {while (tentativa < maximoTentativas){
+    
+
+    if (input.value == numero){
+        alert("Você acertou. Parabéns");
+        input.value = "";   
+        break;
+
+            }else{
+                alert("voce ERROU! Tente novamente");
+                
+                tentativa++;
+                
+              
+                if(tentativa == 1){
+                    alert("Vc tem 3 (três) tentativas");
+                    
+                }
+
+               
+
+                if (tentativa == maximoTentativas){
+                    alert("Suas chances se esgotaram. Vc perdeu."+"O número era: "+numero);
+                    
+                }
+               
+            }
+            
+
+        
+
+        }
+       
+    }
+</script>
+

@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<canvas id="bandeiraBrasil" width="600" height="400" style="border: black 1px solid"></canvas>
+
+<script>
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext ("2d");
+
+/* foi uma tentativa de colocar a parte branca no centro da bandeira
+pincel.fillStyle = "black";
+pincel.fillRect(300,200, 100,300)
+*/
+pincel.fillStyle ="green";
+pincel.fillRect(25,25,550,350);
+
+pincel.fillStyle ="yellow";
+pincel.beginPath();
+pincel.moveTo(300,50);
+pincel.lineTo(50,200);
+pincel.lineTo(550,200);
+pincel.fill();
+
+pincel.beginPath();
+pincel.moveTo(300,350);
+pincel.lineTo(50,200);
+pincel.lineTo(550,200);
+pincel.fill();
+
+pincel.fillStyle = "blue";
+pincel.beginPath();
+pincel.arc(300,200,50,0,2*3.14);
+pincel.fill();
+
+</script>

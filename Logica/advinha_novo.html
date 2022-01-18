@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<input/>
+<button> Compare com o meu segredo </button>
+
+
+<script>
+
+var segredo = Math.round(Math.random()*10)    
+var chute = document.querySelector("input");
+console.log(segredo);
+chute.focus();
+var erros = 0;
+const maximo = 4;
+
+function verifica() {
+    erros++;
+    if(chute.value == segredo){
+    alert("Voce acertou");
+    
+
+}else if(erros == 3){
+    
+    alert("Perdeu");
+
+}
+    else{
+    
+    alert("Vc ainda tem (" + (maximo - erros) + ")tentativas.");
+             
+    }
+    }
+    
+
+ 
+
+
+var button = document.querySelector("button");
+button.onclick = verifica;
+alert(itens);
+
+
+</script>

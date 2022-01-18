@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "Jean";
+    var senhaCadastrada = "jean";
+    
+    var maximo = 3;
+    var tentativa = 1;
+    
+    while(tentativa <= maximo) { 
+    
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+
+    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+        
+        alert("Bem-vindo ao sistema " + loginInformado);
+        tentativa = maximo;
+
+    } else {
+
+        alert("login invalido. tente novamente");
+        if (tentativa == 3){
+            alert ("Bloqueado");
+        } 
+    }
+    tentativa++;
+    }
+
+</script>

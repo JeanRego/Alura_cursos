@@ -1,0 +1,48 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2*3.14);
+        pincel.fill();
+    }
+/*
+    desenhaCirculo(300,200, 25, 'red');
+    desenhaCirculo(300,150, 25, 'yellow');
+    desenhaCirculo(350,200, 25, 'black');
+    desenhaCirculo(250,200, 25, 'orange');
+    desenhaCirculo(300,250, 25, 'blue'); //FUNCOES CHAMADAS MANUALMENTE PARA CONTRUIR A FLOR
+*/
+    function flor (x,y){
+
+      
+    desenhaCirculo(300+x,200+y, 25, 'red');
+    desenhaCirculo(300+x,150+y, 25, 'yellow');
+    desenhaCirculo(350+x,200+y, 25, 'black');
+    desenhaCirculo(250+x,200+y, 25, 'orange');
+    desenhaCirculo(300+x,250+y, 25, 'blue');
+    }
+    
+  flor(0,0);  
+
+/*
+    var x = 0;
+    var fimDeX = 600;
+    var y = 0;
+
+    while(x < fimDeX){
+        flor(x,y);
+        x = x+100;
+        y = y+100;
+    }
+*/
+</script>

@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+       
+    }
+    var coluna = 3;
+    var linha = 10;
+
+    for (var estrela = 1; estrela <= coluna; estrela++ ){
+        
+        for(var horizonte = 1; horizonte <= linha; horizonte++){
+            document.write ("*");
+        
+        }
+        pulaLinha();
+           
+    }
+
+
+
+</script>
+

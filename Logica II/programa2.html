@@ -1,0 +1,34 @@
+<canvas width="600" height="400" style="border: black 1px solid"></canvas>
+
+<script>
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext('2d');
+
+function desenhaUmQuadradoVerde (x,y,color){
+    pincel.fillStyle = color;
+    pincel.fillRect(x,y,50,50);
+    pincel.fillStroke = 'black';
+    pincel.strokeRect (x,y,50,50)
+
+}
+
+var inicioX = 0;
+var fimX = 600;
+
+while(inicioX < fimX){
+    desenhaUmQuadradoVerde(inicioX,0,'blue');
+    desenhaUmQuadradoVerde(inicioX,50,'red');
+    desenhaUmQuadradoVerde(inicioX,100,'green');
+    inicioX = inicioX +50;
+}
+ //REPETICAO UTILIZANDO A ESTRUTURA WHILE
+
+
+/*
+var fimDoX = 600;
+for(var x = 0; x < fimDoX; x = x+50){
+    desenhaUmQuadradoVerde(x,0,'purple');
+}
+*/ //REPETICAO COM LAÇO FOUR
+
+</script>

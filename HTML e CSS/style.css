@@ -1,0 +1,55 @@
+
+        
+        h1{
+            text-align: center;
+            background: #ffffffab;
+            border: 1px solid #0a0a0a;
+            height: 50px;
+            padding: 20px;
+        }
+        
+       #intro {
+            text-align: center;
+            color:black;
+            background: #ffffff86;
+            font-size: 21px;
+            border: black 1px solid;
+        }
+
+        body{
+            
+        }
+
+        #banner{
+            width: 100%;
+        
+        }
+        .principal{
+            background: #4d707e8d;
+            padding: 30px;
+        }
+
+        .itens {
+          font-style: italic;
+        }
+
+        .beneficios{
+            background: white;
+            padding: 20px;
+        }
+        
+        h2{
+            text-align: center;
+        }
+
+        ul{
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+            margin-right: 15%;
+        }
+
+        .imgbeneficios {
+            width: 50%;
+        }
+        

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familiares</title>
+    <h1>Media de idades</h1>
+</head>
+<body>
+  <script>
+
+
+function mostra (frase){
+    document.write(frase);
+    pula();
+}
+function pula (){
+    document.write("<br><br>");
+}
+
+
+var familiares = parseInt(prompt("Qual a quantidade de familiares?"));
+var declarado = 1;
+var totalsomaIdades = 0;
+ 
+
+while(declarado <= familiares ){
+  var membro = parseInt(prompt("Qual a idade do familiar?"));
+  declarado++;
+  totalsomaIdades = totalsomaIdades + membro;
+}
+var media = totalsomaIdades / familiares;
+
+mostra(media);
+
+
+  </script>
+</body>
+</html>
