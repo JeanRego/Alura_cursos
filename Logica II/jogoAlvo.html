@@ -17,8 +17,7 @@
 
     /*pincel.font = "100px serif";
     pincel.fillStyle = 'black';
-    pincel.strokeText ('teste',50,50); 
-*/
+    pincel.strokeText ('teste',50,50); */
 
 
 
@@ -60,6 +59,13 @@
 }
     var pontuacaoDoJogo = 0;
 
+    var telaDePontos = document.querySelector('#quadroPontos');
+    var canetaPontuacao = telaDePontos.getContext ('2d');
+    
+    canetaPontuacao.font = "100px serif";
+    canetaPontuacao.fillStyle = 'black';
+    canetaPontuacao.fillText (pontuacaoDoJogo,50,100); // ESCREVE '0' NO CONTADOR
+
     function dispara (evento){
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
@@ -68,8 +74,14 @@
         && (x < sorteioX + raio) 
         && (y > sorteioY - raio)
         && (y < sorteioY + raio )){
+
                 alert('Acertou');
                 pontuacaoDoJogo++;
+            canetaPontuacao.clearRect (0,0,300,150)
+            canetaPontuacao.font = "100px serif";
+            canetaPontuacao.fillStyle = 'black';
+            canetaPontuacao.fillText (pontuacaoDoJogo,50,100); //ACRESCENTA OS PONTOS NO CONTADOR
+
             }
             console.log(pontuacaoDoJogo)
 }
@@ -80,15 +92,10 @@ tela.onclick = dispara;
 
    setInterval(atualizaTela,5000);
 
-   var telaDePontos = document.querySelector('#quadroPontos');
-    var canetaPontuacao = telaDePontos.getContext ('2d');
+    
 
-    document.write (pontuacaoDoJogo);
 
-    canetaPontuacao.font = "100px serif";
-    canetaPontuacao.fillStyle = 'black';
-    canetaPontuacao.fillText (pontuacaoDoJogo,50,100);
-
+    
 
 
 
