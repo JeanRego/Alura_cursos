@@ -1,5 +1,5 @@
 const nomes = [{id:1, name:'Jean'},{id:2, name:'Isa'},{id:3, name:'rato'}];
-const idades = [27,19];
+const idades = [10,5];
 idades.push(22)
 
 let juntou = nomes.concat(idades) //concatenação de arrays

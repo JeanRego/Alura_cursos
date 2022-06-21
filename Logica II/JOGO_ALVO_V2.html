@@ -1,5 +1,13 @@
-<meta charset="UTF-8">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Alvo</title>
+</head>
+<body>
+    
 <canvas width="600" height="400" style="border: black 2px solid;"></canvas>
 <canvas id="quadroPontos" width="300" height="150" style="border: black 2px solid"></canvas>
 
@@ -9,7 +17,7 @@
   
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
-    var raio = 10;
+    var raio = 30;
     var sorteioX;
     var sorteioY;
 
@@ -59,6 +67,7 @@
 }
     var pontuacaoDoJogo = 0;
 
+
     var telaDePontos = document.querySelector('#quadroPontos');
     var canetaPontuacao = telaDePontos.getContext ('2d');
     
@@ -76,7 +85,30 @@
         && (y < sorteioY + raio )){
 
                 alert('Acertou');
+
                 pontuacaoDoJogo++;
+
+                if (pontuacaoDoJogo == 11){          //AUMENTA VELOCIDADE DO JOGO POR PONTOS
+                    alert("VC N VAI CONSEGUIR RODOLFO");
+                    raio = 25
+                    velocidade_jogo = setInterval(atualizaTela,1500);
+                }
+                if (pontuacaoDoJogo == 21){
+                    alert('NIvel 2. É MELHOR VC PARAR')
+                    raio = 20
+                    velocidade_jogo = setInterval(atualizaTela, 1000);
+                }
+                if(pontuacaoDoJogo == 30){
+                    alert('Nivel 3. PARAAAA GAYZAO')
+                    raio = 15
+                    setInterval(atualizaTela,500)
+                } 
+                if(pontuacaoDoJogo == 40){
+                    alert("NIVEL MAXIMO. AGORA VOU BEBER SEU SANGUE")
+                    raio = 5
+                    setInterval(atualizaTela,100)
+                }
+
             canetaPontuacao.clearRect (0,0,300,150)
             canetaPontuacao.font = "100px serif";
             canetaPontuacao.fillStyle = 'black';
@@ -90,7 +122,8 @@
 tela.onclick = dispara;
 
 
-   setInterval(atualizaTela,500);
+   var velocidade_jogo = setInterval(atualizaTela,2500);
+   console.log('Teste',velocidade_jogo)
 
     
 
@@ -100,5 +133,5 @@ tela.onclick = dispara;
 
 
 </script>
-
+</body>
 </html>
